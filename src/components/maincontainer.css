@@ -1,0 +1,12 @@
+.main-container{
+    height: 100%;
+    width: 100%;
+}
+
+.main-container > div{
+    height: 100%;
+    width: 80%;
+    min-width: 768px;
+    margin: auto;
+    background-color: #edf1f4;
+}
