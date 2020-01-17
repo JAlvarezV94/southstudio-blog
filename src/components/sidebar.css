@@ -1,6 +1,11 @@
 .sidebar{
     height: 100%;
     width: 200px;
-    background-color: #2196F3;
+    background-color: #509ee8;
     z-index: 2;
+}
+
+.sidebar > img{
+    margin: 15px;
+    margin-top: 25px;
 }
