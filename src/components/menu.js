@@ -9,7 +9,7 @@ function Menu(props){
                 props.buttons.map((current) => {
                     return (
                         <li className="menu-element">
-                            <button onClick={() => {alert("Not working yet! :P")}}>
+                            <button onClick={() => {current.onClick(current.id)}}>
                                 <FontAwesomeIcon icon={current.icon}/>
                                 <span>
                                     {current.text}

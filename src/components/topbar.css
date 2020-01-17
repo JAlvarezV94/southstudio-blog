@@ -1,7 +1,20 @@
 .topbar{
     background-color: #353535;
     min-height: 30px;
-    width: 100%;
-    position: fixed;
     top: 0;
+    width: 100%;
+}
+
+.topbar > h1{
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }

@@ -8,7 +8,7 @@ export default class MainContainer extends React.Component{
             <div className="main-container">
                 
                 <div>
-                    
+                    {this.props.content}
                 </div>
             </div>
         );
