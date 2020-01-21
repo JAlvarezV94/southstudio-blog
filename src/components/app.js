@@ -13,7 +13,7 @@ export default class App extends React.Component{
         this.state = {
             currentPage: {
                 title: "South Studio",
-                content: "home"
+                content: 1
             },
             buttons: [
                 {id: 1, text: "Home", icon: "home", onClick: this.onButtonClick.bind(this)}, 
@@ -39,7 +39,7 @@ export default class App extends React.Component{
 
     onButtonClick(currentButton) {
         this.setState({currentPage: {
-                content: currentButton === 1 ? "Home" : "About me",
+                content: currentButton === 1 ? 1 : 2,
                 title: "South Studio",
             }
         });

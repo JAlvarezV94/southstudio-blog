@@ -1,6 +1,7 @@
 .main-container{
     height: 100%;
     width: 100%;
+    display: contents;
 }
 
 .main-container > div{
@@ -9,4 +10,5 @@
     min-width: 768px;
     margin: auto;
     background-color: #edf1f4;
+    padding: 10px;
 }
