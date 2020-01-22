@@ -22,7 +22,7 @@ export default class MainContainer extends React.Component{
         switch(contentId){
             case 1:
                 var dummyData = GetPostList();
-                content = <PostCard Title={dummyData[0].Title} TextContent={dummyData[0].Content}/>
+                content = this.buildPostList(dummyData);
                 break;
             case 2:
                 break;
@@ -31,5 +31,17 @@ export default class MainContainer extends React.Component{
         }
 
         return content;
+    }
+
+    buildPostList(postList){
+        return (
+            <ul className="post-list">
+                {
+                    postList.map((item) => {
+                        return <PostCard Title={item.Title} TextContent={item.Content}/>
+                    })
+                }
+            </ul>
+        )
     }
 }
