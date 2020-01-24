@@ -1,5 +1,6 @@
 import React from 'react';
 import './sidebar.css';
+import './sidebar.mobile.css';
 import Logo from '../imgs/sunset.svg';
 import Menu from './menu';
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import './maincontainer.css';
+import './maincontainer.mobile.css';
 import PostCard from './postcard';
 import GetPostList from '../data/dummydata';
 

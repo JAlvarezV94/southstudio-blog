@@ -1,0 +1,8 @@
+@media (max-width: 768px){
+    .main-container > div{
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+}
