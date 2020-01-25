@@ -1,0 +1,9 @@
+@media(max-width: 768px){
+    .topbar > h1{
+        margin: 0;
+    }
+
+    .menu-sh-button{
+        display: block;
+    }
+}

@@ -4,7 +4,7 @@ import SideBar from './sidebar';
 import TopBar from './topbar';
 import MainContainer from './maincontainer';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser, faHome } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faHome, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 export default class App extends React.Component{
    
@@ -12,8 +12,13 @@ export default class App extends React.Component{
         super(props);
         this.state = {
             currentPage: {
-                title: "South Studio",
-                content: 1
+                content: 1,
+            },
+            topBar:{ 
+                title: "South Studio", 
+                icon: "bars", 
+                sidebarHiden: true,
+                onClick: this.showHideSidebar.bind(this)
             },
             buttons: [
                 {id: 1, text: "Home", icon: "home", onClick: this.onButtonClick.bind(this)}, 
@@ -23,14 +28,14 @@ export default class App extends React.Component{
     }
 
     render(){
-        library.add(faUser, faHome);
+        library.add(faUser, faHome, faBars, faTimes);
 
         return (
             <div className="app">
                 <SideBar buttons={this.state.buttons}/>
 
                 <div className="app-container">
-                    <TopBar title={this.state.currentPage.title}/>
+                    <TopBar topBar={this.state.topBar}/>
                     <MainContainer content={this.state.currentPage.content}/>
                 </div>
             </div>
@@ -40,8 +45,53 @@ export default class App extends React.Component{
     onButtonClick(currentButton) {
         this.setState({currentPage: {
                 content: currentButton === 1 ? 1 : 2,
-                title: "South Studio",
             }
         });
+    }
+
+    showHideSidebar(){
+        let hideBar = this.state.topBar.sidebarHiden ? false : true;
+        let iconToShow = this.state.topBar.sidebarHiden ? "times" : "bars";
+
+        this.setState({
+            topBar: {
+                sidebarHiden: hideBar,
+                icon: iconToShow,
+                title: "South Studio",
+                onClick: this.showHideSidebar.bind(this)
+            }
+        });
+
+        if(this.state.topBar.sidebarHiden){
+            let sidebar = document.getElementById("ssbSideBar");
+            let pos = 100;
+            let id = window.setInterval(showBarFun, 5);
+
+            function showBarFun(){
+                if(pos === 0){
+                    window.clearInterval(id);
+                }else{
+                    pos--;
+                    if(pos > 0)
+                        sidebar.style.left = "-" + pos + "%";
+                    else
+                        sidebar.style.left = 0;
+                }
+            }
+        }else{
+            let sidebar = document.getElementById("ssbSideBar");
+            let pos = 0;
+            var id = window.setInterval(hideBarFun, 5);
+
+            function hideBarFun(){
+                if(pos === 100){
+                    window.clearInterval(id);
+                }else{
+                    pos++;
+                    sidebar.style.left = "-" + pos + "%";
+                }
+            }
+        }
+
     }
 }

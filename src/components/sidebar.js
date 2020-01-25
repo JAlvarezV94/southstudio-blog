@@ -7,7 +7,7 @@ import Menu from './menu';
 export default class SideBar extends React.Component{
     render(){
         return (
-            <div className="sidebar">
+            <div id="ssbSideBar" className="sidebar">
 
                 <img alt="South Studio Logo" src={Logo}/>
 
