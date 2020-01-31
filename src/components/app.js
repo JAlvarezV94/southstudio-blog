@@ -20,6 +20,11 @@ export default class App extends React.Component{
                 sidebarHiden: true,
                 onClick: this.showHideSidebar.bind(this)
             },
+            postCard: {
+                id: 3,
+                onClick: this.onButtonClick.bind(this),
+            },
+            postToShow: 0,
             buttons: [
                 {id: 1, text: "Home", icon: "home", onClick: this.onButtonClick.bind(this)}, 
                 {id: 2, text: "About me", icon: "user", onClick: this.onButtonClick.bind(this)}
@@ -36,17 +41,28 @@ export default class App extends React.Component{
 
                 <div className="app-container">
                     <TopBar topBar={this.state.topBar}/>
-                    <MainContainer content={this.state.currentPage.content}/>
+                    <MainContainer 
+                        content={this.state.currentPage.content} 
+                        postCard={this.state.postCard}
+                        postToShow={this.state.postToShow}/>
                 </div>
             </div>
         );
     }
 
-    onButtonClick(currentButton) {
-        this.setState({currentPage: {
-                content: currentButton === 1 ? 1 : 2,
-            }
-        });
+    onButtonClick(currentButton, postId) {
+        if(currentButton === 1 || currentButton === 2){
+            this.setState({currentPage: {
+                    content: currentButton === 1 ? 1 : 2,
+                }
+            });
+        }else if(currentButton === 3){
+            this.setState({currentPage: {
+                    content: currentButton,
+                },
+                postToShow: postId,
+            })
+        }
     }
 
     showHideSidebar(){

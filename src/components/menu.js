@@ -8,7 +8,7 @@ function Menu(props){
             {
                 props.buttons.map((current) => {
                     return (
-                        <li className="menu-element">
+                        <li className="menu-element" key={current.id}>
                             <button onClick={() => {current.onClick(current.id)}}>
                                 <FontAwesomeIcon icon={current.icon}/>
                                 <span>

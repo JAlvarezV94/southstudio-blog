@@ -1,6 +1,7 @@
 const GetPostList = () => {
     var post = [
         {
+            IdPost: 1,
             Title: "Titulo 1",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio metus, "
             +"eleifend sit amet varius nec, mollis in arcu. Vestibulum convallis fermentum ante nec ornare. "
@@ -31,6 +32,7 @@ const GetPostList = () => {
             +"consequat condimentum. In euismod sapien vitae felis malesuada gravida."
         },
         {
+            IdPost: 2,
             Title: "Titulo 2",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio metus, "
             +"eleifend sit amet varius nec, mollis in arcu. Vestibulum convallis fermentum ante nec ornare. "
@@ -61,6 +63,7 @@ const GetPostList = () => {
             +"consequat condimentum. In euismod sapien vitae felis malesuada gravida."
         },
         {
+            IdPost: 3,
             Title: "Titulo 3",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio metus, "
             +"eleifend sit amet varius nec, mollis in arcu. Vestibulum convallis fermentum ante nec ornare. "
@@ -91,6 +94,7 @@ const GetPostList = () => {
             +"consequat condimentum. In euismod sapien vitae felis malesuada gravida."
         },
         {
+            IdPost: 4,
             Title: "Titulo 4",
             Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio metus, "
             +"eleifend sit amet varius nec, mollis in arcu. Vestibulum convallis fermentum ante nec ornare. "
