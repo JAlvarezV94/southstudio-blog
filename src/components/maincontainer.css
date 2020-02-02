@@ -1,11 +1,12 @@
 .main-container{
     height: 100%;
     width: 100%;
-    display: contents;
+    display: block;
+    overflow: auto;
 }
 
 .main-container > div{
-    height: 100%;
+    min-height: 100%;
     width: 80%;
     max-width: 800px;
     margin: auto;
