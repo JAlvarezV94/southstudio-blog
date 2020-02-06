@@ -3,14 +3,15 @@ import './maincontainer.css';
 import './maincontainer.mobile.css';
 import PostCard from './postcard';
 import PostView from './postview';
-import GetPostList from '../data/dummydata';
+import DummyData from '../data/dummydata';
+import AboutMe from './aboutme';
 
 export default class MainContainer extends React.Component{
 
     constructor(props){
         super(props);
         this.state = {
-            postList: GetPostList()
+            postList: DummyData.GetPostList()
         }
     }
     render() {
@@ -31,6 +32,7 @@ export default class MainContainer extends React.Component{
                 content = this.buildPostList(this.state.postList);
                 break;
             case 2:
+                content = <AboutMe/>;
                 break;
             case 3:
                 var postToShow = this.state.postList.find(current => current.IdPost === this.props.postToShow)                

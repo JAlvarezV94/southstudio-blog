@@ -1,0 +1,16 @@
+.profile-img-container{
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 1px solid;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img-container > img{
+    display: block;
+    height: 100%;
+}
