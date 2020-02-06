@@ -1,9 +1,18 @@
 @media(max-width: 768px){
+    .topbar{
+        position: relative;
+    }
+
     .topbar > h1{
         margin: 0;
     }
 
     .menu-sh-button{
         display: block;
+    }
+
+    .admin-menu-button{
+        right: 0;
+        position: absolute;
     }
 }

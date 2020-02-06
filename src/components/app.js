@@ -4,7 +4,7 @@ import SideBar from './sidebar';
 import TopBar from './topbar';
 import MainContainer from './maincontainer';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUser, faHome, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faHome, faBars, faTimes, faCog, faSignOutAlt, faUserCog } from '@fortawesome/free-solid-svg-icons'
 
 export default class App extends React.Component{
    
@@ -16,7 +16,10 @@ export default class App extends React.Component{
             },
             topBar:{ 
                 title: "South Studio", 
-                icon: "bars", 
+                menuIcon: "bars", 
+                gearIcon: "cog",
+                logoutIcon: "sign-out-alt",
+                adminIcon: "user-cog",
                 sidebarHiden: true,
                 onClick: this.showHideSidebar.bind(this)
             },
@@ -33,7 +36,7 @@ export default class App extends React.Component{
     }
 
     render(){
-        library.add(faUser, faHome, faBars, faTimes);
+        library.add(faUser, faHome, faBars, faTimes, faCog, faSignOutAlt, faUserCog);
 
         return (
             <div className="app">
@@ -72,7 +75,10 @@ export default class App extends React.Component{
         this.setState({
             topBar: {
                 sidebarHiden: hideBar,
-                icon: iconToShow,
+                menuIcon: iconToShow, 
+                gearIcon: "cog",
+                logoutIcon: "sign-out-alt",
+                adminIcon: "user-cog",
                 title: "South Studio",
                 onClick: this.showHideSidebar.bind(this)
             }

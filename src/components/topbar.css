@@ -30,3 +30,47 @@
     color: #fefefe;
     display: none;
 }
+
+.admin-menu{
+    display: block;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.admin-menu > li{
+    padding: 8px;
+}
+
+.admin-menu > li:hover{
+    background-color: #353535;
+    color: #fefefe;
+}
+
+
+.admin-menu-button{
+    position: relative;
+    height: 100%;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fefefe;
+    padding: 0 10px;
+}
+
+.admin-menu-button:hover{
+    background-color: #fefefe;
+    color: #000000;
+}
+
+.admin-menu-container{
+    display: none;
+    position: absolute;
+    background-color: #fefefe;
+    z-index: 1;
+    color: #000000;
+    min-width: 160px;
+    right: 0;
+    margin-top: 10px;
+    text-align: start;
+}
